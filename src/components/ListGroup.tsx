@@ -1,8 +1,12 @@
 //import { MouseEvent, useState } from "react";
 import { useState } from "react";
+//using an interaface u can define the shape/interface pf an object
+interface Props {
+  items: string[];
+  heading: string;
+}
 
-function ListGroup() {
-  let items = ["Matale", "Kandy", "Nuwara Eliya", "Trincomalee", "Jafna"];
+function ListGroup({ items, heading }: Props) {
   //let selectedIndex = 0;
   //Hook: a function that allows to tap into built-in features in react
   //from state hook u can tell that data/state in this component can change overtime
@@ -15,7 +19,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {items.length === 0 && <p>No Items Found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
