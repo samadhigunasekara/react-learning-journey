@@ -4,9 +4,11 @@ import { useState } from "react";
 interface Props {
   items: string[];
   heading: string;
+  //Property     //parameter     //return void
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   //let selectedIndex = 0;
   //Hook: a function that allows to tap into built-in features in react
   //from state hook u can tell that data/state in this component can change overtime
@@ -32,6 +34,7 @@ function ListGroup({ items, heading }: Props) {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(item);
             }}
             //onClick={//handleClick}
             //U don't call the function with (), just referencing. Calling will be done later at runtime
