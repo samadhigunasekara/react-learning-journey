@@ -1,6 +1,7 @@
 //import { MouseEvent, useState } from "react";
 import { useState } from "react";
-//using an interaface u can define the shape/interface pf an object
+//using an interface u can define the shape/interface of an object
+//props is the object here, and the two properties of it are items and heading (The 3rd property is the function)
 interface Props {
   items: string[];
   heading: string;
