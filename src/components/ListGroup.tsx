@@ -1,4 +1,3 @@
-//import { MouseEvent, useState } from "react";
 import { useState } from "react";
 //using an interface u can define the shape/interface of an object
 //props is the object here, and the two properties of it are items and heading (The 3rd property is the function)
@@ -10,12 +9,11 @@ interface Props {
 }
 
 function ListGroup({ items, heading, onSelectItem }: Props) {
-  //let selectedIndex = 0;
-  //Hook: a function that allows to tap into built-in features in react
-  //from state hook u can tell that data/state in this component can change overtime
+  // Concept: Hook
+  // A function that lets us 'hook' into React features.
+  // selectedIndex = current data (arr[0])
+  // setSelectedIndex = function to update data (arr[1])
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  //arr[0]; // var (selectedIndex)
-  //arr[1]; // updater function
 
   //Event handler
   //const handleClick = (event: MouseEvent) => console.log(event);
